@@ -19,19 +19,17 @@ const removeshowLoadingSpinner = () => {
 }
 
 
-const getApiData = async(url = "", data = {}) => {
+const getApiData = async(url = "") => {
     const response = await fetch(url, {
-        method: "POST",
+        method: "GET",
         credentials: "same-origin",
         headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
+            "Content-Type": "application/json",
+        }
     });
     try {
         const newData = await response.json();
         counter++;
-        //throw new Error ("ooops");
         return newData;
     } catch (error) {
         if(counter <= 10) {
@@ -39,14 +37,13 @@ const getApiData = async(url = "", data = {}) => {
         } else {
             console.log("Too many calls");
         }
-        
-        //console.log("error", error);
     }
 }
 
 const getQuote = async() => {
     showLoadingSpinner();
     const proxyUrl = 'https://salty-hollows-61024.herokuapp.com/';
+    //const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
     try {
         const data = await getApiData(proxyUrl + apiUrl);
@@ -56,6 +53,7 @@ const getQuote = async() => {
         console.log("error", error);
     }
 }
+
 
 $("#new-quote").off("click").on("click", getQuote);
 
