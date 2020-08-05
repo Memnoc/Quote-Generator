@@ -13,15 +13,12 @@ const showLoadingSpinner = () => {
     quoteContainer.hidden = true;
 }
 
-
-
 const removeshowLoadingSpinner = () => {
     if (!loader.hidden) {
         quoteContainer.hidden = false;
         loader.hidden = true;
     }
 }
-
 
 const getApiData = async(url = "") => {
     const response = await fetch(url, {
@@ -55,7 +52,6 @@ const getQuote = async() => {
         removeshowLoadingSpinner();
     }
 }
-
 
 $("#new-quote").off("click").on("click", getQuote);
 
