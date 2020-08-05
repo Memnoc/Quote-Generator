@@ -2,14 +2,14 @@
 
 ## Quote Generator
 
-> Quote Generator is a tool that allows you to get quotes from the [Forismatic API](https://forismatic.com/en/).
-> The tool also allows you to Tweet the quote diretcly into your Twitter account.
+> Quote Generator is a web app that allows you to get quotes from the [Forismatic API](https://forismatic.com/en/).
+> The app also allows you to Tweet the quote diretcly into your Twitter account.
 > The project aims to display a good use of CSS styles and practices and a solid JavaScript architecture to fetch the API requests.
 
 ![alt text](https://i.imgur.com/8B0Ehs4.png)
 ![alt text](https://i.imgur.com/MBQdgpz.png)
 
-## What using a proxy?
+## Why using a proxy?
 
 > The app runs at [this location](https://memnoc.github.io/Quote-Generator/) but it can also run locally on your machine.
 > The app uses a Heroku generated [proxy-anywhere](https://github.com/Rob--W/cors-anywhere) type of proxy to by-pass CORS related issue when fetching the API data, and pass headers along with the request.
