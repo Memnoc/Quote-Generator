@@ -38,5 +38,5 @@ FORSIMATIC API
  - The [ACCADEMY ZERO TO MASTERY](https://academy.zerotomastery.io/)
  # License
 
- This repo is open source software [licensed as MIT](https://github.com/Memnoc/Evaluate_News_NPL/blob/master/LICENSE).
+ This repo is open source software [licensed as MIT](https://github.com/Memnoc/Quote-Generator/blob/master/LICENSE).
 
